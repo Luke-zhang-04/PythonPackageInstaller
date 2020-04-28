@@ -5,7 +5,7 @@ root = Tk()
 canv = Canvas(root, width = 800, height = 600, background = "gray")
 canv.pack()
 
-img = Image.open("testImage.png")
+img = Image.open("examples/PIL_Examples/tkinterImage/testImage.png")
 imgTk = ImageTk.PhotoImage(img) #Converts the image into something that can be displayed in tkinter
 
 
