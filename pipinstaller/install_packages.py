@@ -1,6 +1,6 @@
 """The Python Package Installer"""
 """
-Copyright 2020 Misha Melnyk
+Copyright 2020 Misha Melnyk, Luke Zhang
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 """
