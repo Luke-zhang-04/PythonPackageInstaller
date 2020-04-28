@@ -10,7 +10,7 @@ This script allows for easy installation of a batch of package dependencies
 given a file or modifying the script. This tool uses pip, which is included
 locally for ease of inclusion for the tool.
 
-HOW TO USE
+## HOW TO USE ##
 1. When including in a project, provide the lib folder on the top level of the
 project. Inlcude all files in the repository lib folder in the project folder.
 This ensures that the functions can reach each other. Additionally, make sure 
