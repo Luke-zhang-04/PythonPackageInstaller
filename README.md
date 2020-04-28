@@ -1,4 +1,11 @@
 # PythonPackageInstaller
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![GitHub license](https://img.shields.io/github/license/kertox662/PythonPackageInstaller.svg)](https://github.com/kertox662/PythonPackageInstaller/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/kertox662/PythonPackageInstaller.svg)](https://GitHub.com/kertox662/PythonPackageInstaller/releases/)
+[![Github all releases](https://img.shields.io/github/downloads/kertox662/PythonPackageInstaller/total.svg)](https://GitHub.com/kertox662/PythonPackageInstaller/releases/)
+[![GitHub contributors](https://img.shields.io/github/contributors/kertox662/PythonPackageInstaller.svg)](https://GitHub.com/kertox662/PythonPackageInstaller/graphs/contributors/)
+[![GitHub stars](https://img.shields.io/github/stars/kertox662/PythonPackageInstaller.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/kertox662/PythonPackageInstaller/stargazers/)
+<br/>
 This script allows for easy installation of a batch of package dependencies
 given a file or modifying the script. This tool uses pip, which is included
 locally for ease of inclusion for the tool.
