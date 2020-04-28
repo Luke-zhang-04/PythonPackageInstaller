@@ -11,15 +11,15 @@ given a file or modifying the script. This tool uses pip, which is included
 locally for ease of inclusion for the tool.
 
 ## HOW TO USE ##
-1. When including in a project, provide the `pypackageinstaller` folder on the top level of the
-project. Inlcude all files in the repository `pypackageinstaller` folder in the project folder.
+1. When including in a project, provide the `pipinstaller` folder on the top level of the
+project. Inlcude all files in the repository `pipinstaller` folder in the project folder.
 This ensures that the functions can reach each other. Additionally, make sure 
 to have a resources folder for the pip script and the list of target packages.
 This can be done easily by simply copying both folders from the repository to 
 the project.
 
 2. Packages can be specified in two ways:
-    - Modifying the list named "targetPackages" in install_Functions.py under `pypackageinstaller`
+    - Modifying the list named "targetPackages" in install_Functions.py under `pipinstaller`
     - Modifying the targetPackages.txt in resources
     - Note that the list in the script takes priority over the file. If it is not
     empty, it will take the packages from there rather than the file.
@@ -37,18 +37,18 @@ the project.
 3. Import install_packages.py and run the install() procedure. This will run the
 process to ask the user to install each package. 
 
-If the `pypackageinstaller` folder is in the same folder as the starter file, this can be done by doing:
+If the `pipinstaller` folder is in the same folder as the starter file, this can be done by doing:
 ```python
-import pypackageinstaller
+import pipinstaller
 ```
 For simplicity sake, this is also an option
 ```python
-import pypackageinstaller as pypi
+import pipinstaller as pipi
 ```
 
 Another option is to just import the install function. To do this, do:
 ```python
-from pypackageinstaller import install
+from pipinstaller import install
 ```
 To see an example, look at the install.py file.
 
@@ -59,7 +59,7 @@ that no imports apart from the installation can be done prior to calling the pro
 
 For example:
 ```python
-from pypackageinstaller import install  
+from pipinstaller import install  
 
 install()
 
@@ -67,9 +67,9 @@ install()
 ```
 or
 ```python
-import pypackageinstaller as pypi
+import pipinstaller as pipi
 
-pypi.install()
+pipi.install()
 
 #...Your Program
 ```

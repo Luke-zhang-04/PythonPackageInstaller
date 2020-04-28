@@ -5,7 +5,7 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 """
 
-from pypackageinstaller.install_Functions import checkPip, installPip, checkPackage, installPackage, packagesMissing
+from pipinstaller.install_Functions import checkPip, installPip, checkPackage, installPackage, packagesMissing
 import sys
 
 targetPackages = [
