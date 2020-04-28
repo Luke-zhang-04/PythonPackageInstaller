@@ -41,7 +41,11 @@ If the `pypackageinstaller` folder is in the same folder as the starter file, th
 ```python
 import pypackageinstaller
 ```
-    
+For simplicity sake, this is also an option
+```python
+import pypackageinstaller as pypi
+```
+
 Another option is to just import the install function. To do this, do:
 ```python
 from pypackageinstaller import install
