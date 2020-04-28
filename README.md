@@ -31,13 +31,14 @@ the project.
 process to ask the user to install each package. 
 
 If the lib folder is in the same folder as the starter file, this can be done by doing:
-
-    import install_packages.
+```python
+import install_packages.
+```
     
 Another option is to just import the install function. To do this, do:
-
-    from install_packages import install
-
+```python
+from install_packages import install
+```
 To see an example, look at the install.py file.
 
 
@@ -47,13 +48,12 @@ being installed to occur after running the install() procedure. What this means 
 that no imports apart from the installation can be done prior to calling the procedure.
 
 For example:
+```python
+from install_Functions import install  
 
-    from install_Functions import install  
+install()
 
-    install()
-
-    import [Insert Library Here]
-
-    ...Your Program
+#...Your Program
+```
 
 Thank you for using this python package installer.
