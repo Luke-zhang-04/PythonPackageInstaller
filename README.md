@@ -69,7 +69,7 @@ or
 ```python
 import pypackageinstaller as pypi
 
-ppi.install()
+pypi.install()
 
 #...Your Program
 ```
