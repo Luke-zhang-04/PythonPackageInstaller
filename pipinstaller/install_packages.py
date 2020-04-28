@@ -17,7 +17,7 @@ def install():
     global targetPackages
     pipInstalled = checkPip()
     if len(targetPackages) == 0:
-        with open("resources/targetPackages.txt") as fin:
+        with open("pipinstaller/resources/targetPackages.txt") as fin:
             targetPackages = fin.read().splitlines()
             for i in range(len(targetPackages)):
                 targetPackages[i] = targetPackages[i].split(',')
