@@ -13,7 +13,7 @@ mouseCoords = [w,h/2]
 arrowObj = 0
 angle = 0
 
-img = Image.open("examples/PIL_Examples/mousefollower/arrow.png")
+img = Image.open("arrow.png")
 imgTk = ImageTk.PhotoImage(img)
 
 def updateAngle(x, y):

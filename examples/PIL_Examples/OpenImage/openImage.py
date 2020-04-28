@@ -1,3 +1,3 @@
 from PIL import Image
-img = Image.open("examples/PIL_Examples/OpenImage/testImage.png")
+img = Image.open("testImage.png")
 img.show()

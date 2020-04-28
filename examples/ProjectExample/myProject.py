@@ -2,5 +2,5 @@ from pypackageinstaller import install
 install()
 
 from PIL import Image
-img = Image.open("examples/ProjectExample/testImage.png")
+img = Image.open("testImage.png")
 img.show()
