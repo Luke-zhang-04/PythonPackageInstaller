@@ -40,7 +40,7 @@ def checkPackage(pkg):
 #Function to install pip
 #######################################
 def installPip(printOut = False):
-    cmd = "py -3 pipinstaller\resources\get-pip.py --user" if sys.platform == 'win32' else "python3 pipinstaller/resources/get-pip.py --user" 
+    cmd = "py -3 pipinstaller\\resources\get-pip.py --user" if sys.platform == 'win32' else "python3 pipinstaller/resources/get-pip.py --user" 
     #Runs the python script in resources and installs pip locally for the user
     process = subprocess.Popen(cmd,
                                shell=True,
