@@ -1,8 +1,7 @@
 """The Python Package Installer"""
 """
-Copyright 2020 Misha Melnyk, Luke Zhang
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+pipinstaller/install_Functions.py
+Copyright 2020 Misha Melnyk, Luke Zhang | MIT License
 """
 import subprocess
 import sys
@@ -15,7 +14,8 @@ resPath = pathlib.Path("pipinstaller/resources")
 #Function to check pip install
 #######################################
 def checkPip():
-    cmd = "pip"
+    cmd = "py -3 -m pip" if sys.platform == 'win32' else "python3 -m pip" #This command will normally give options for 
+                                  #arguments for the pip command but will output to stderr if the command is not found
     process = subprocess.Popen(cmd,
                                shell=True,
                                stdout=subprocess.PIPE,
@@ -41,8 +41,7 @@ def checkPackage(pkg):
 #Function to install pip
 #######################################
 def installPip(printOut = False):
-    pipPath = resPath / "get-pip.py"
-    cmd = f"py -3 {pipPath} --user" if sys.platform == 'win32' else f"python3 {pipPath} --user" 
+    cmd = "py -3 pipinstaller\\resources\get-pip.py --user" if sys.platform == 'win32' else "python3 pipinstaller/resources/get-pip.py --user" 
     #Runs the python script in resources and installs pip locally for the user
     process = subprocess.Popen(cmd,
                                shell=True,
@@ -71,7 +70,7 @@ def installPip(printOut = False):
 #Function to install Package
 #######################################
 def installPackage(pkg, printOut = False):
-    cmd = f"pip install {pkg[1]} --user"
+    cmd = "py -3 -m pip install {} --user".format(pkg[1]) if sys.platform == 'win32' else "python3 -m pip install {} --user".format(pkg[1])
     #Runs the pip command to install the Pillow (PIL) package from online
     # cmd = "py -3 -m pip install resources\Pillow-4.3.0-cp33-cp33m-win32.whl --user" if sys.platform == 'win32' else "python3 -m pip install Pillow" 
     #Runs the pip command for the wheel file in resources
