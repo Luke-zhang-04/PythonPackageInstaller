@@ -1,8 +1,6 @@
 """The Python Package Installer"""
 """
-Copyright 2020 Misha Melnyk, Luke Zhang
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Copyright 2020 Misha Melnyk, Luke Zhang | MIT License
 """
 
 from pipinstaller.install_Functions import checkPip, installPip, checkPackage, installPackage, packagesMissing
@@ -14,13 +12,14 @@ targetPackages = [
 
 
 def install():
+    """Installs the specified packages"""
     global targetPackages
 
-    acceptAll = "-y" in sys.argv #Checks if the -y parameter is passed in. Will ignore [y/n] queries if it is
+    acceptAll = "-y" in sys.argv # Checks if the -y parameter is passed in. Will ignore [y/n] queries if it is
 
     pipInstalled = checkPip()
-    if len(targetPackages) == 0:
-        with open("pipinstaller/resources/targetPackages.txt") as fin:
+    if len(targetPackages) == 0: # If target packages array is not speficied
+        with open("pipinstaller/resources/targetPackages.txt") as fin: # Read from targetpackages.txt
             targetPackages = fin.read().splitlines()
             for i in range(len(targetPackages)):
                 targetPackages[i] = targetPackages[i].split(',')
@@ -36,11 +35,11 @@ def install():
         query = input("Show full output log? [y/n] ")
         doFullLog = True if query.lower() in ["y", 'yes'] else False
 ###################################################################################################
-    if pipInstalled and len(packagesMissing) == 0: #If both pip and PIL are installed
+    if pipInstalled and len(packagesMissing) == 0: # If both pip and PIL are installed
         print("Pip and all packages are installed.\nNo installations are required.")
         return
  ###################################################################################################   
-    if not pipInstalled: #If pip is not installed
+    if not pipInstalled: # If pip is not installed
         print("Pip was not found on the system.")
         if acceptAll:
             answer = "y"
