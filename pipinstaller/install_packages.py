@@ -31,23 +31,24 @@ def install(pathToRequirements="pipinstaller/resources"):
     pipInstalled = checkPip()
 
     ###################################################################################################
-    suffix = "/" if pathToRequirements[-1] != "/" else ""
-    try:
-        open(
-            f"{pathToRequirements}{suffix}requirements.txt"
-        )  # Check for a requirements.txt file
+    if len(targetPackages) == 0:
+        suffix = "/" if pathToRequirements[-1] != "/" else ""
+        try:
+            open(
+                f"{pathToRequirements}{suffix}requirements.txt"
+            )  # Check for a requirements.txt file
 
-        if acceptAll:
-            doFullLog = True
-        else:
-            query = input("Show full output log? [y/n] ")
-            doFullLog = True if query.lower() in ["y", "yes"] else False
+            if acceptAll:
+                doFullLog = True
+            else:
+                query = input("Show full output log? [y/n] ")
+                doFullLog = True if query.lower() in ["y", "yes"] else False
 
-        installRequirements(pathToRequirements, printOut=doFullLog)
+            installRequirements(pathToRequirements, printOut=doFullLog)
 
-        return
-    except FileNotFoundError:
-        pass
+            return
+        except FileNotFoundError:
+            pass
 
     ###################################################################################################
     if len(targetPackages) == 0:  # If target packages array is not speficied
