@@ -34,7 +34,7 @@ jobs:
 
       - name: Remove-requirements
         run: del /f pipinstaller/resources/requirements.txt
-        - name: Test
+      - name: Test
         run: py -3 test.py -y
       - name: Test-Install
         run: py -3 test.py
