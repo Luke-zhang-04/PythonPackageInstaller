@@ -33,7 +33,7 @@ jobs:
         run: py -3 test.py
 
       - name: Remove-requirements
-        run: del /f pipinstaller/resources/requirements.txt
+        run: rmdir /s /q pipinstaller/resources/requirements.txt
       - name: Test
         run: py -3 test.py -y
       - name: Test-Install
