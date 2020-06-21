@@ -124,9 +124,9 @@ def installRequirements(path="pipinstaller/resources", printOut=False):
     returns boolean annotating if an error was raised or not
     """
     cmd = (
-        f"py -3 -m pip install -r {path}/requirements.txt --user"
+        "py -3 -m pip install -r {}/requirements.txt --user".format(path)
         if sys.platform == "win32"
-        else f"python3 -m pip install -r {path}/requirements.txt --user"
+        else "python3 -m pip install -r {}/requirements.txt --user".format(path)
     )
 
     # Runs the pip install -r requirements.txt

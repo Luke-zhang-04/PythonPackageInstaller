@@ -35,7 +35,7 @@ def install(pathToRequirements="pipinstaller/resources", auto=False):
         suffix = "/" if pathToRequirements[-1] != "/" else ""
         try:
             open(
-                f"{pathToRequirements}{suffix}requirements.txt"
+                "{}{}requirements.txt".format(pathToRequirements, suffix)
             )  # Check for a requirements.txt file
 
             if acceptAll:
@@ -101,24 +101,24 @@ def install(pathToRequirements="pipinstaller/resources", auto=False):
             return
     ###################################################################################################
     for pkg in packagesMissing:
-        print(f"Package {pkg[0]} was not found on the system.")
+        print("Package {} was not found on the system.".format(pkg[0]))
         if acceptAll:
             answer = "y"
         else:
-            answer = input(f"Would you like to install the {pkg[0]} package? [y/n] ")
+            answer = input("Would you like to install the {} package? [y/n] ".format(pkg[0]))
 
         if answer.lower() in ["y", "yes"]:
-            print(f"Preparing to install {pkg[0]}...")
+            print("Preparing to install {}...".format(pkg[0]))
             pkgSuccess = installPackage(pkg, doFullLog)
 
             if not pkgSuccess:
-                print(f"Error occurred when installing {pkg[0]}")
+                print("Error occurred when installing {}".format(pkg[0]))
                 if not acceptAll and not input(
                     "Would you like to try to continue anyways?[y/n] "
                 ).lower() in ["y", "yes"]:
                     return
             else:
-                print(f"{pkg[0]} was installed successfully!")
+                print("{} was installed successfully!".format(pkg[0]))
 
     print("Everything Finished! Exiting...")
 
