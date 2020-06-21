@@ -104,7 +104,7 @@ def installPackage(pkg, printOut = False):
     #     print(pkg[1],"was successfully installed")
     return noError
 
-def installRequirements(path = "pipinstaller/resources/requirements.txt", printOut = False):
+def installRequirements(path = "pipinstaller/resources", printOut = False):
     """Installs via requirements.txt
     
     Pass in path to requirmenets\n
