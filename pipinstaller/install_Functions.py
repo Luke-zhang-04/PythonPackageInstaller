@@ -23,7 +23,7 @@ def checkPip() -> bool:
 
     for _ in process.stderr:
         return False
-    return True  # Returns if whether it is installed or not
+    return True  # Returns whether it is installed or not
 
 
 def checkPackage(pkg):
