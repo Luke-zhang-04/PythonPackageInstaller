@@ -46,10 +46,12 @@ def installPip(printOut=False):
 
     returns boolean annotating if an error was raised or not
     """
+    pipPath = resPath / "get-pip.py"
+
     cmd = (
-        "py -3 pipinstaller\\resources\get-pip.py --user"
+        "py -3 {} --user".format(pipPath)
         if sys.platform == "win32"
-        else "python3 pipinstaller/resources/get-pip.py --user"
+        else "python3 {} --user".format(pipPath)
     )
     # Runs the python script in resources and installs pip locally for the user
     process = subprocess.Popen(

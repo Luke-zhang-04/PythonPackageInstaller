@@ -105,7 +105,9 @@ def install(pathToRequirements="pipinstaller/resources", auto=False):
         if acceptAll:
             answer = "y"
         else:
-            answer = input("Would you like to install the {} package? [y/n] ".format(pkg[0]))
+            answer = input(
+                "Would you like to install the {} package? [y/n] ".format(pkg[0])
+            )
 
         if answer.lower() in ["y", "yes"]:
             print("Preparing to install {}...".format(pkg[0]))
